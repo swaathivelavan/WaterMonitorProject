@@ -1,0 +1,242 @@
+package androidx.constraintlayout.widget;
+
+public final class R {
+    private R() {
+    }
+
+    public static final class attr {
+        public static final int barrierAllowsGoneWidgets = 2130903109;
+        public static final int barrierDirection = 2130903110;
+        public static final int chainUseRtl = 2130903159;
+        public static final int constraintSet = 2130903225;
+        public static final int constraint_referenced_ids = 2130903226;
+        public static final int content = 2130903227;
+        public static final int emptyVisibility = 2130903296;
+        public static final int layout_constrainedHeight = 2130903422;
+        public static final int layout_constrainedWidth = 2130903423;
+        public static final int layout_constraintBaseline_creator = 2130903424;
+        public static final int layout_constraintBaseline_toBaselineOf = 2130903425;
+        public static final int layout_constraintBottom_creator = 2130903426;
+        public static final int layout_constraintBottom_toBottomOf = 2130903427;
+        public static final int layout_constraintBottom_toTopOf = 2130903428;
+        public static final int layout_constraintCircle = 2130903429;
+        public static final int layout_constraintCircleAngle = 2130903430;
+        public static final int layout_constraintCircleRadius = 2130903431;
+        public static final int layout_constraintDimensionRatio = 2130903432;
+        public static final int layout_constraintEnd_toEndOf = 2130903433;
+        public static final int layout_constraintEnd_toStartOf = 2130903434;
+        public static final int layout_constraintGuide_begin = 2130903435;
+        public static final int layout_constraintGuide_end = 2130903436;
+        public static final int layout_constraintGuide_percent = 2130903437;
+        public static final int layout_constraintHeight_default = 2130903438;
+        public static final int layout_constraintHeight_max = 2130903439;
+        public static final int layout_constraintHeight_min = 2130903440;
+        public static final int layout_constraintHeight_percent = 2130903441;
+        public static final int layout_constraintHorizontal_bias = 2130903442;
+        public static final int layout_constraintHorizontal_chainStyle = 2130903443;
+        public static final int layout_constraintHorizontal_weight = 2130903444;
+        public static final int layout_constraintLeft_creator = 2130903445;
+        public static final int layout_constraintLeft_toLeftOf = 2130903446;
+        public static final int layout_constraintLeft_toRightOf = 2130903447;
+        public static final int layout_constraintRight_creator = 2130903448;
+        public static final int layout_constraintRight_toLeftOf = 2130903449;
+        public static final int layout_constraintRight_toRightOf = 2130903450;
+        public static final int layout_constraintStart_toEndOf = 2130903451;
+        public static final int layout_constraintStart_toStartOf = 2130903452;
+        public static final int layout_constraintTop_creator = 2130903453;
+        public static final int layout_constraintTop_toBottomOf = 2130903454;
+        public static final int layout_constraintTop_toTopOf = 2130903455;
+        public static final int layout_constraintVertical_bias = 2130903456;
+        public static final int layout_constraintVertical_chainStyle = 2130903457;
+        public static final int layout_constraintVertical_weight = 2130903458;
+        public static final int layout_constraintWidth_default = 2130903459;
+        public static final int layout_constraintWidth_max = 2130903460;
+        public static final int layout_constraintWidth_min = 2130903461;
+        public static final int layout_constraintWidth_percent = 2130903462;
+        public static final int layout_editor_absoluteX = 2130903464;
+        public static final int layout_editor_absoluteY = 2130903465;
+        public static final int layout_goneMarginBottom = 2130903466;
+        public static final int layout_goneMarginEnd = 2130903467;
+        public static final int layout_goneMarginLeft = 2130903468;
+        public static final int layout_goneMarginRight = 2130903469;
+        public static final int layout_goneMarginStart = 2130903470;
+        public static final int layout_goneMarginTop = 2130903471;
+        public static final int layout_optimizationLevel = 2130903474;
+
+        private attr() {
+        }
+    }
+
+    public static final class id {
+        public static final int bottom = 2131230796;
+        public static final int end = 2131230841;
+        public static final int gone = 2131230861;
+        public static final int invisible = 2131230875;
+        public static final int left = 2131230880;
+        public static final int packed = 2131230938;
+        public static final int parent = 2131230940;
+        public static final int percent = 2131230945;
+        public static final int right = 2131230952;
+        public static final int spread = 2131230990;
+        public static final int spread_inside = 2131230991;
+        public static final int start = 2131230996;
+        public static final int top = 2131231033;
+        public static final int wrap = 2131231053;
+
+        private id() {
+        }
+    }
+
+    public static final class styleable {
+        public static final int[] ConstraintLayout_Layout = {16842948, 16843039, 16843040, 16843071, 16843072, 2130903109, 2130903110, 2130903159, 2130903225, 2130903226, 2130903422, 2130903423, 2130903424, 2130903425, 2130903426, 2130903427, 2130903428, 2130903429, 2130903430, 2130903431, 2130903432, 2130903433, 2130903434, 2130903435, 2130903436, 2130903437, 2130903438, 2130903439, 2130903440, 2130903441, 2130903442, 2130903443, 2130903444, 2130903445, 2130903446, 2130903447, 2130903448, 2130903449, 2130903450, 2130903451, 2130903452, 2130903453, 2130903454, 2130903455, 2130903456, 2130903457, 2130903458, 2130903459, 2130903460, 2130903461, 2130903462, 2130903464, 2130903465, 2130903466, 2130903467, 2130903468, 2130903469, 2130903470, 2130903471, 2130903474};
+        public static final int ConstraintLayout_Layout_android_maxHeight = 2;
+        public static final int ConstraintLayout_Layout_android_maxWidth = 1;
+        public static final int ConstraintLayout_Layout_android_minHeight = 4;
+        public static final int ConstraintLayout_Layout_android_minWidth = 3;
+        public static final int ConstraintLayout_Layout_android_orientation = 0;
+        public static final int ConstraintLayout_Layout_barrierAllowsGoneWidgets = 5;
+        public static final int ConstraintLayout_Layout_barrierDirection = 6;
+        public static final int ConstraintLayout_Layout_chainUseRtl = 7;
+        public static final int ConstraintLayout_Layout_constraintSet = 8;
+        public static final int ConstraintLayout_Layout_constraint_referenced_ids = 9;
+        public static final int ConstraintLayout_Layout_layout_constrainedHeight = 10;
+        public static final int ConstraintLayout_Layout_layout_constrainedWidth = 11;
+        public static final int ConstraintLayout_Layout_layout_constraintBaseline_creator = 12;
+        public static final int ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf = 13;
+        public static final int ConstraintLayout_Layout_layout_constraintBottom_creator = 14;
+        public static final int ConstraintLayout_Layout_layout_constraintBottom_toBottomOf = 15;
+        public static final int ConstraintLayout_Layout_layout_constraintBottom_toTopOf = 16;
+        public static final int ConstraintLayout_Layout_layout_constraintCircle = 17;
+        public static final int ConstraintLayout_Layout_layout_constraintCircleAngle = 18;
+        public static final int ConstraintLayout_Layout_layout_constraintCircleRadius = 19;
+        public static final int ConstraintLayout_Layout_layout_constraintDimensionRatio = 20;
+        public static final int ConstraintLayout_Layout_layout_constraintEnd_toEndOf = 21;
+        public static final int ConstraintLayout_Layout_layout_constraintEnd_toStartOf = 22;
+        public static final int ConstraintLayout_Layout_layout_constraintGuide_begin = 23;
+        public static final int ConstraintLayout_Layout_layout_constraintGuide_end = 24;
+        public static final int ConstraintLayout_Layout_layout_constraintGuide_percent = 25;
+        public static final int ConstraintLayout_Layout_layout_constraintHeight_default = 26;
+        public static final int ConstraintLayout_Layout_layout_constraintHeight_max = 27;
+        public static final int ConstraintLayout_Layout_layout_constraintHeight_min = 28;
+        public static final int ConstraintLayout_Layout_layout_constraintHeight_percent = 29;
+        public static final int ConstraintLayout_Layout_layout_constraintHorizontal_bias = 30;
+        public static final int ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle = 31;
+        public static final int ConstraintLayout_Layout_layout_constraintHorizontal_weight = 32;
+        public static final int ConstraintLayout_Layout_layout_constraintLeft_creator = 33;
+        public static final int ConstraintLayout_Layout_layout_constraintLeft_toLeftOf = 34;
+        public static final int ConstraintLayout_Layout_layout_constraintLeft_toRightOf = 35;
+        public static final int ConstraintLayout_Layout_layout_constraintRight_creator = 36;
+        public static final int ConstraintLayout_Layout_layout_constraintRight_toLeftOf = 37;
+        public static final int ConstraintLayout_Layout_layout_constraintRight_toRightOf = 38;
+        public static final int ConstraintLayout_Layout_layout_constraintStart_toEndOf = 39;
+        public static final int ConstraintLayout_Layout_layout_constraintStart_toStartOf = 40;
+        public static final int ConstraintLayout_Layout_layout_constraintTop_creator = 41;
+        public static final int ConstraintLayout_Layout_layout_constraintTop_toBottomOf = 42;
+        public static final int ConstraintLayout_Layout_layout_constraintTop_toTopOf = 43;
+        public static final int ConstraintLayout_Layout_layout_constraintVertical_bias = 44;
+        public static final int ConstraintLayout_Layout_layout_constraintVertical_chainStyle = 45;
+        public static final int ConstraintLayout_Layout_layout_constraintVertical_weight = 46;
+        public static final int ConstraintLayout_Layout_layout_constraintWidth_default = 47;
+        public static final int ConstraintLayout_Layout_layout_constraintWidth_max = 48;
+        public static final int ConstraintLayout_Layout_layout_constraintWidth_min = 49;
+        public static final int ConstraintLayout_Layout_layout_constraintWidth_percent = 50;
+        public static final int ConstraintLayout_Layout_layout_editor_absoluteX = 51;
+        public static final int ConstraintLayout_Layout_layout_editor_absoluteY = 52;
+        public static final int ConstraintLayout_Layout_layout_goneMarginBottom = 53;
+        public static final int ConstraintLayout_Layout_layout_goneMarginEnd = 54;
+        public static final int ConstraintLayout_Layout_layout_goneMarginLeft = 55;
+        public static final int ConstraintLayout_Layout_layout_goneMarginRight = 56;
+        public static final int ConstraintLayout_Layout_layout_goneMarginStart = 57;
+        public static final int ConstraintLayout_Layout_layout_goneMarginTop = 58;
+        public static final int ConstraintLayout_Layout_layout_optimizationLevel = 59;
+        public static final int[] ConstraintLayout_placeholder = {2130903227, 2130903296};
+        public static final int ConstraintLayout_placeholder_content = 0;
+        public static final int ConstraintLayout_placeholder_emptyVisibility = 1;
+        public static final int[] ConstraintSet = {16842948, 16842960, 16842972, 16842996, 16842997, 16842999, 16843000, 16843001, 16843002, 16843039, 16843040, 16843071, 16843072, 16843551, 16843552, 16843553, 16843554, 16843555, 16843556, 16843557, 16843558, 16843559, 16843560, 16843701, 16843702, 16843770, 16843840, 2130903109, 2130903110, 2130903159, 2130903226, 2130903422, 2130903423, 2130903424, 2130903425, 2130903426, 2130903427, 2130903428, 2130903429, 2130903430, 2130903431, 2130903432, 2130903433, 2130903434, 2130903435, 2130903436, 2130903437, 2130903438, 2130903439, 2130903440, 2130903441, 2130903442, 2130903443, 2130903444, 2130903445, 2130903446, 2130903447, 2130903448, 2130903449, 2130903450, 2130903451, 2130903452, 2130903453, 2130903454, 2130903455, 2130903456, 2130903457, 2130903458, 2130903459, 2130903460, 2130903461, 2130903462, 2130903464, 2130903465, 2130903466, 2130903467, 2130903468, 2130903469, 2130903470, 2130903471};
+        public static final int ConstraintSet_android_alpha = 13;
+        public static final int ConstraintSet_android_elevation = 26;
+        public static final int ConstraintSet_android_id = 1;
+        public static final int ConstraintSet_android_layout_height = 4;
+        public static final int ConstraintSet_android_layout_marginBottom = 8;
+        public static final int ConstraintSet_android_layout_marginEnd = 24;
+        public static final int ConstraintSet_android_layout_marginLeft = 5;
+        public static final int ConstraintSet_android_layout_marginRight = 7;
+        public static final int ConstraintSet_android_layout_marginStart = 23;
+        public static final int ConstraintSet_android_layout_marginTop = 6;
+        public static final int ConstraintSet_android_layout_width = 3;
+        public static final int ConstraintSet_android_maxHeight = 10;
+        public static final int ConstraintSet_android_maxWidth = 9;
+        public static final int ConstraintSet_android_minHeight = 12;
+        public static final int ConstraintSet_android_minWidth = 11;
+        public static final int ConstraintSet_android_orientation = 0;
+        public static final int ConstraintSet_android_rotation = 20;
+        public static final int ConstraintSet_android_rotationX = 21;
+        public static final int ConstraintSet_android_rotationY = 22;
+        public static final int ConstraintSet_android_scaleX = 18;
+        public static final int ConstraintSet_android_scaleY = 19;
+        public static final int ConstraintSet_android_transformPivotX = 14;
+        public static final int ConstraintSet_android_transformPivotY = 15;
+        public static final int ConstraintSet_android_translationX = 16;
+        public static final int ConstraintSet_android_translationY = 17;
+        public static final int ConstraintSet_android_translationZ = 25;
+        public static final int ConstraintSet_android_visibility = 2;
+        public static final int ConstraintSet_barrierAllowsGoneWidgets = 27;
+        public static final int ConstraintSet_barrierDirection = 28;
+        public static final int ConstraintSet_chainUseRtl = 29;
+        public static final int ConstraintSet_constraint_referenced_ids = 30;
+        public static final int ConstraintSet_layout_constrainedHeight = 31;
+        public static final int ConstraintSet_layout_constrainedWidth = 32;
+        public static final int ConstraintSet_layout_constraintBaseline_creator = 33;
+        public static final int ConstraintSet_layout_constraintBaseline_toBaselineOf = 34;
+        public static final int ConstraintSet_layout_constraintBottom_creator = 35;
+        public static final int ConstraintSet_layout_constraintBottom_toBottomOf = 36;
+        public static final int ConstraintSet_layout_constraintBottom_toTopOf = 37;
+        public static final int ConstraintSet_layout_constraintCircle = 38;
+        public static final int ConstraintSet_layout_constraintCircleAngle = 39;
+        public static final int ConstraintSet_layout_constraintCircleRadius = 40;
+        public static final int ConstraintSet_layout_constraintDimensionRatio = 41;
+        public static final int ConstraintSet_layout_constraintEnd_toEndOf = 42;
+        public static final int ConstraintSet_layout_constraintEnd_toStartOf = 43;
+        public static final int ConstraintSet_layout_constraintGuide_begin = 44;
+        public static final int ConstraintSet_layout_constraintGuide_end = 45;
+        public static final int ConstraintSet_layout_constraintGuide_percent = 46;
+        public static final int ConstraintSet_layout_constraintHeight_default = 47;
+        public static final int ConstraintSet_layout_constraintHeight_max = 48;
+        public static final int ConstraintSet_layout_constraintHeight_min = 49;
+        public static final int ConstraintSet_layout_constraintHeight_percent = 50;
+        public static final int ConstraintSet_layout_constraintHorizontal_bias = 51;
+        public static final int ConstraintSet_layout_constraintHorizontal_chainStyle = 52;
+        public static final int ConstraintSet_layout_constraintHorizontal_weight = 53;
+        public static final int ConstraintSet_layout_constraintLeft_creator = 54;
+        public static final int ConstraintSet_layout_constraintLeft_toLeftOf = 55;
+        public static final int ConstraintSet_layout_constraintLeft_toRightOf = 56;
+        public static final int ConstraintSet_layout_constraintRight_creator = 57;
+        public static final int ConstraintSet_layout_constraintRight_toLeftOf = 58;
+        public static final int ConstraintSet_layout_constraintRight_toRightOf = 59;
+        public static final int ConstraintSet_layout_constraintStart_toEndOf = 60;
+        public static final int ConstraintSet_layout_constraintStart_toStartOf = 61;
+        public static final int ConstraintSet_layout_constraintTop_creator = 62;
+        public static final int ConstraintSet_layout_constraintTop_toBottomOf = 63;
+        public static final int ConstraintSet_layout_constraintTop_toTopOf = 64;
+        public static final int ConstraintSet_layout_constraintVertical_bias = 65;
+        public static final int ConstraintSet_layout_constraintVertical_chainStyle = 66;
+        public static final int ConstraintSet_layout_constraintVertical_weight = 67;
+        public static final int ConstraintSet_layout_constraintWidth_default = 68;
+        public static final int ConstraintSet_layout_constraintWidth_max = 69;
+        public static final int ConstraintSet_layout_constraintWidth_min = 70;
+        public static final int ConstraintSet_layout_constraintWidth_percent = 71;
+        public static final int ConstraintSet_layout_editor_absoluteX = 72;
+        public static final int ConstraintSet_layout_editor_absoluteY = 73;
+        public static final int ConstraintSet_layout_goneMarginBottom = 74;
+        public static final int ConstraintSet_layout_goneMarginEnd = 75;
+        public static final int ConstraintSet_layout_goneMarginLeft = 76;
+        public static final int ConstraintSet_layout_goneMarginRight = 77;
+        public static final int ConstraintSet_layout_goneMarginStart = 78;
+        public static final int ConstraintSet_layout_goneMarginTop = 79;
+        public static final int[] LinearConstraintLayout = {16842948};
+        public static final int LinearConstraintLayout_android_orientation = 0;
+
+        private styleable() {
+        }
+    }
+}
