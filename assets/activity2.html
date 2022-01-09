@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - Q Water</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+    <style>
+  body { background-color: grey; }
+  #container { height: 100%; width: 100%; display: table;
+ }
+  #inner { vertical-align: middle; display: table-cell; }
+  #gauge_div { width: 120px; margin: 0 auto; }
+</style>
+</head>
+<body translate="no">
+<center>
+    <iframe height="300" width="450"
+            margin="0" src="https://thingspeak.com/channels/994647/charts/1?bgcolor=%23add8e6&color=%23d62020&dynamic=true&max=10&min=0&results=60&title=Water+Flow&type=column" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+    <div style="position:relative; width:95vw;">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div id="ddd"></div>
+    <div id="container">
+        <div id="inner">
+            <div id="gauge_div"></div>
+        </div>
+    </div>
+</center>
+</body>
+<script id="rendered-js">
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+
+  // set your channel id here
+  var channel_id = 994647;
+  // set your channel's read api key here if necessary
+  var api_key = 'CG74J0CQ8OO95BHV';
+  // maximum value for the gauge
+  var max_gauge_value = 70;
+  // name of the gauge
+  var guageName="Water Flow";
+
+
+  // global variables
+  var chart, charts, data;
+
+  // load the google gauge visualization
+  google.load('visualization', '1', {packages:['gauge']});
+  google.setOnLoadCallback(initChart);
+
+  // display the data
+  function displayData(point) {
+    data.setValue(0,0,guageName);
+    data.setValue(0, 1, point);
+    chart.draw(data, options);
+  }
+
+  // load the data
+  function loadData() {
+    // variable for the data point
+    var p;
+
+    // get the data from thingspeak
+    $.getJSON('https://api.thingspeak.com/channels/' + channel_id + '/feed/last.json?api_key=' + api_key, function(data) {
+
+      // get the data point
+      p = data.field1;
+
+      // if there is a data point display it
+      if (p) {
+        // p = Math.round((p / max_gauge_value) * 100);
+        displayData(p);
+      }
+
+    });
+  }
+
+  // initialize the chart
+  function initChart() {
+
+    data = new google.visualization.DataTable();
+    data.addColumn('string', 'Label');
+    data.addColumn('number', 'Value');
+    data.addRows(1);
+
+    chart = new google.visualization.Gauge(document.getElementById('gauge_div'));
+    options = {width: 220, height: 220,minorTicks: 5};
+
+    loadData();
+
+    // load new data every 15 seconds
+    setInterval('loadData()', 15000);
+  }
+
+
+
+
+// =============== CHART ===================
+
+ let labels = [1,2,3];
+    let ddd = [2,3,4];
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels,
+        datasets: [{
+            data:ddd,
+            borderWidth: 1,
+          barThickness: 36,
+          label: 'usage',
+          categoryPercentage: 0.5,
+          backgroundColor:'#2196f3'
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+setInterval(()=>{
+
+    $.getJSON('https://api.thingspeak.com/channels/994647/feeds.json?key=CG74J0CQ8OO95BHV', function(data) {
+        let { feeds } = data;
+        feeds = feeds.filter(feed=>feed.field2);
+        //console.log(feeds);
+        let chunked = {};
+        let monthly = {};
+        feeds.forEach((e)=>{
+            let thisDate = e.created_at.split('T')[0];
+            chunked[thisDate] = chunked[thisDate] || 0;
+            chunked[thisDate] += parseInt(e.field2);
+
+           let thisMonth = e.created_at.split('-').splice(0,2).join('-');
+           monthly[thisMonth] = monthly[thisMonth] || 0;
+           monthly[thisMonth] += parseInt(e.field2);
+        });
+
+        console.log(monthly);
+
+        document.getElementById('ddd').innerHTML = JSON.stringify(monthly);
+
+        Clabels = Object.keys(chunked);
+        Cddd = Object.values(chunked);
+
+        Cddd.forEach((e,i)=>{
+            if(i>0){
+                Cddd[i]=Cddd[i]-Cddd[i-1];
+            }
+        });
+
+        labels.splice(0,labels.length);
+        ddd.splice(0,labels.length);
+
+        labels.push(...Clabels);
+        ddd.push(...Cddd);
+
+
+
+        myChart.update();
+    });
+
+},1000);
+    </script>
+</body>
+</html>
